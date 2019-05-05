@@ -16,15 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         initDatas();
-
     }
 
 
 
     private void initViews() {
         mMainSeekBar=findViewById(R.id.main_seekbar);
-
-
     }
 
     private void initDatas() {

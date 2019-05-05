@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--竖线seekbar属性-->
+    <declare-styleable name="SpeedSeekBar">
+        <attr name="background_line_color" format="color"/>
+        <attr name="background_circle_color" format="color"/>
+        <attr name="kedu_text_color" format="color"/>
+    </declare-styleable>
+
+</resources>

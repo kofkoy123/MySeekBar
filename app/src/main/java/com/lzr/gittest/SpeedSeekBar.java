@@ -1,6 +1,7 @@
 package com.lzr.gittest;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -20,6 +21,9 @@ import java.util.List;
 
 public class SpeedSeekBar extends View {
 
+    private final int mLineColor;
+    private final int mTextColor;
+    private final int mCircleColor;
     private Context mContext;
     private final List<String> mTextList;
     private Paint mGridLinePaint;
@@ -48,6 +52,11 @@ public class SpeedSeekBar extends View {
     public SpeedSeekBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SpeedSeekBar);
+        mLineColor = ta.getColor(R.styleable.SpeedSeekBar_background_line_color, Color.WHITE);
+        mTextColor = ta.getColor(R.styleable.SpeedSeekBar_kedu_text_color, Color.parseColor("#718089"));
+        mCircleColor = ta.getColor(R.styleable.SpeedSeekBar_background_circle_color, Color.parseColor("#f55061"));
+
         mTextList = new ArrayList<>();
         mTextList.add("1/4X");
         mTextList.add("1X");
@@ -66,18 +75,18 @@ public class SpeedSeekBar extends View {
         mGridLinePaint = new Paint();
         mGridLinePaint.setAntiAlias(false);
         mGridLinePaint.setStrokeWidth(2);
-        mGridLinePaint.setColor(Color.WHITE);
+        mGridLinePaint.setColor(mLineColor);
 
         mTextPaint = new Paint();
         mTextPaint.setTextSize(sp2px(mContext, 12));
         mTextPaint.setAntiAlias(true);
-        mTextPaint.setColor(Color.parseColor("#718089"));
+        mTextPaint.setColor(mTextColor);
         mTextPaint.setShadowLayer(2, 1, 1, Color.parseColor("#aa000000"));
 
 //        实例化画笔对象
         mCirclePaint = new Paint();
 //        给画笔设置颜色
-        mCirclePaint.setColor(Color.parseColor("#f55061"));
+        mCirclePaint.setColor(mCircleColor);
 //        设置画笔属性
         mCirclePaint.setStyle(Paint.Style.FILL);//画笔属性是空心圆
         mCirclePaint.setAntiAlias(true);//抗锯齿
@@ -141,14 +150,14 @@ public class SpeedSeekBar extends View {
 
     /**
      * 设置刻度数据
+     *
      * @param datas
      */
-    public void setDatas(List<String> datas){
+    public void setDatas(List<String> datas) {
         mTextList.clear();
         mTextList.addAll(datas);
         invalidate();
     }
-
 
 
     public interface OnPointSeekBarChangedListener {
