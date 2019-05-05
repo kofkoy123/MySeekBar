@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mMainSeekBar.setOnSeekBarChangedListener(new SpeedSeekBar.OnPointSeekBarChangedListener() {
             @Override
             public void onProgressChanging(SpeedSeekBar speedSeekBar, float progress) {
+                Log.e("lzr","进度："+progress);
 
             }
 
