@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDatas() {
         List<String> datas=new ArrayList<>();
+        datas.add("0X");
         datas.add("1X");
         datas.add("2X");
         datas.add("3X");
         datas.add("4X");
-        datas.add("5X");
         mMainSeekBar.setDatas(datas);
     }
 }
