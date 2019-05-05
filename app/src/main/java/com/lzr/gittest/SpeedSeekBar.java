@@ -58,7 +58,7 @@ public class SpeedSeekBar extends View {
         mCircleColor = ta.getColor(R.styleable.SpeedSeekBar_background_circle_color, Color.parseColor("#f55061"));
 
         mTextList = new ArrayList<>();
-        mTextList.add("1/4X");
+        mTextList.add("0X");
         mTextList.add("1X");
         mTextList.add("2X");
         mTextList.add("3X");
