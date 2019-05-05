@@ -139,6 +139,10 @@ public class SpeedSeekBar extends View {
         return super.dispatchTouchEvent(event);
     }
 
+    /**
+     * 设置刻度数据
+     * @param datas
+     */
     public void setDatas(List<String> datas){
         mTextList.addAll(datas);
     }
