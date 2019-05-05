@@ -140,7 +140,7 @@ public class SpeedSeekBar extends View {
     }
 
     public void setDatas(List<String> datas){
-
+        mTextList.addAll(datas);
     }
 
 
