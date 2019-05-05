@@ -139,7 +139,7 @@ public class SpeedSeekBar extends View {
         return super.dispatchTouchEvent(event);
     }
 
-    public void setDatas(){
+    public void setDatas(List<String> datas){
 
     }
 
