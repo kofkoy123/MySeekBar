@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.lzr.gittest.SpeedSeekBar
+        android:id="@+id/main_seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -144,7 +144,9 @@ public class SpeedSeekBar extends View {
      * @param datas
      */
     public void setDatas(List<String> datas){
+        mTextList.clear();
         mTextList.addAll(datas);
+        invalidate();
     }
 
 
