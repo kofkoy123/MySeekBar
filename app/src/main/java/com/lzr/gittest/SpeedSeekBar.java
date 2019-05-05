@@ -158,7 +158,7 @@ public class SpeedSeekBar extends View {
         /**
          * @param progress
          */
-        void onProgressChangeing(SpeedSeekBar speedSeekBar, float progress);
+        void onProgressChanging(SpeedSeekBar speedSeekBar, float progress);
 
         void onChanged(float progress);
     }
@@ -186,7 +186,7 @@ public class SpeedSeekBar extends View {
         if (this.progress != progress) {
             this.progress = progress;
             if (mOnPointSeekBarChangedListener != null) {
-                mOnPointSeekBarChangedListener.onProgressChangeing(this, progress);
+                mOnPointSeekBarChangedListener.onProgressChanging(this, progress);
             }
             invalidate();
         }

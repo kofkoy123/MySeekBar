@@ -2,6 +2,7 @@ package com.lzr.gittest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         mMainSeekBar=findViewById(R.id.main_seekbar);
+        mMainSeekBar.setOnSeekBarChangedListener(new SpeedSeekBar.OnPointSeekBarChangedListener() {
+            @Override
+            public void onProgressChanging(SpeedSeekBar speedSeekBar, float progress) {
+
+            }
+
+            @Override
+            public void onChanged(float progress) {
+                Log.e("lzr","进度："+progress);
+            }
+        });
     }
 
     private void initDatas() {
