@@ -45,5 +45,6 @@ public class MainActivity extends AppCompatActivity {
         datas.add("3X");
         datas.add("4X");
         mMainSeekBar.setDatas(datas);
+        Log.e("lzr","initDatas");
     }
 }
